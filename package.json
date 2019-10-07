@@ -1,9 +1,16 @@
 {
   "name": "settings-app",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Luiz Augusto Amorim de Souza",
+  "homepage": "",
+  "email": "luiz.amorm.souza@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
+    "build-lib": "ng build laas-setting",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -24,6 +31,7 @@
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.7.1",
+    "@ionic/storage": "^2.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
@@ -32,6 +40,7 @@
   "devDependencies": {
     "@angular-devkit/architect": "~0.801.2",
     "@angular-devkit/build-angular": "~0.801.2",
+    "@angular-devkit/build-ng-packagr": "~0.801.3",
     "@angular-devkit/core": "~8.1.2",
     "@angular-devkit/schematics": "~8.1.2",
     "@angular/cli": "~8.1.2",
@@ -50,10 +59,12 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.1.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.35.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic teste project for component laas-setting"
 }

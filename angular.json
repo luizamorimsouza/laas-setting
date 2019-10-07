@@ -171,6 +171,41 @@
           }
         }
       }
+    },
+    "laas-setting": {
+      "projectType": "library",
+      "root": "projects/laas-setting",
+      "sourceRoot": "projects/laas-setting/src",
+      "prefix": "laas",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/laas-setting/tsconfig.lib.json",
+            "project": "projects/laas-setting/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/laas-setting/src/test.ts",
+            "tsConfig": "projects/laas-setting/tsconfig.spec.json",
+            "karmaConfig": "projects/laas-setting/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/laas-setting/tsconfig.lib.json",
+              "projects/laas-setting/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -182,6 +217,9 @@
     },
     "@ionic/angular-toolkit:page": {
       "styleext": "scss"
+    },
+    "@schematics/angular:component": {
+      "style": "scss"
     }
   }
 }

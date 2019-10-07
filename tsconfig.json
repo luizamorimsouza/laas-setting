@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "laas-setting": [
+        "dist/laas-setting"
+      ],
+      "laas-setting/*": [
+        "dist/laas-setting/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
