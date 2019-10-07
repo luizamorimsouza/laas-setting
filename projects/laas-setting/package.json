@@ -1,6 +1,6 @@
 {
   "name": "laas-setting",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Luiz Augusto Amorim de Souza",
   "email": "luiz.amorm.souza@gmail.com",
   "description": "Library that create configuration items simply",
