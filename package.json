@@ -2,12 +2,12 @@
   "name": "settings-app",
   "version": "0.0.1",
   "author": "Luiz Augusto Amorim de Souza",
-  "homepage": "",
+  "homepage": "https://github.com/luizamorimsouza/laas-setting",
   "email": "luiz.amorm.souza@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/luizamorimsouza/laas-setting.git"
   },
   "scripts": {
     "build-lib": "ng build laas-setting",
