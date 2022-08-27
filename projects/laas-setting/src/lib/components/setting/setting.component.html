@@ -1,32 +1,28 @@
 <div class="setting-root">
   <ion-item button="true" lines="full" detail="false" [disabled]="setting?.disabled" (click)="onClick($event)">
-    <ion-grid>
-      <ion-row nowrap>
 
-        <ion-col>
+    <ion-label class="ion-text-wrap">
 
-          <div>{{ setting?.title }}</div>
+      <ion-text>
+        <h2 class="setting-title">{{ setting?.title }}</h2>
+      </ion-text>
 
-          <span class="ion-text-wrap" class="setting-value"
-            *ngIf="(setting?.type == 'checkbox' || setting?.type == 'button') && setting?.description">
-            {{ setting.description }}
-          </span>
+      <p *ngIf="(setting?.type == 'checkbox' || setting?.type == 'button') && setting?.description"
+        class="setting-value ion-text-wrap">
+        {{ setting.description }}
+      </p>
 
-          <span class="setting-value" *ngIf="setting?.type == 'text'">
-            {{ setting?.value }}
-          </span>
+      <p class="setting-value" *ngIf="setting?.type == 'text'">
+        {{ setting?.value }}
+      </p>
 
-          <span class="setting-value" *ngIf="setting?.type == 'list'">
-            {{ setting?.label }}
-          </span>
+      <p class="setting-value" *ngIf="setting?.type == 'list'">
+        {{ setting?.label }}
+      </p>
 
-        </ion-col>
+    </ion-label>
 
-        <ion-col size="auto" class="ion-align-self-center" *ngIf="setting?.type == 'checkbox'">
-          <ion-toggle [checked]="setting?.value"></ion-toggle>
-        </ion-col>
+    <ion-toggle [checked]="setting.value" slot="end" *ngIf="setting?.type == 'checkbox'"></ion-toggle>
 
-      </ion-row>
-    </ion-grid>
   </ion-item>
 </div>

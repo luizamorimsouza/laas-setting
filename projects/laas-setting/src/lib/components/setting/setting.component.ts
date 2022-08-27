@@ -19,13 +19,15 @@ export class SettingComponent implements OnInit {
 
   constructor(
     private storage: Storage,
-    private alertCtrl: AlertController) {
-  }
+    private alertCtrl: AlertController
+  ) { }
 
   async ngOnInit() {
+    this.storage.create();
+
     if (this.setting) {
       // Try to restore the value to the store, if it fails, use the value attribute set in the configuration creation.
-      this.setting.value = JSON.parse(await this.storage.get(this.setting.key)) || this.setting.value;
+      this.setting.value = await this.storage.get(this.setting.key) ?? this.setting.value;
 
       if (this.setting.type === 'list') {
         this.setLabel();
@@ -58,7 +60,6 @@ export class SettingComponent implements OnInit {
 
   /**
    * Assigns the label value of the setting.
-   * @param value the value of the setting.
    */
   private setLabel() {
     for (const option of this.setting.options) {
@@ -91,7 +92,7 @@ export class SettingComponent implements OnInit {
     }
 
     if (save) {
-      await this.storage.set(this.setting.key, JSON.stringify(newer));
+      await this.storage.set(this.setting.key, newer);
       this.setting.value = newer;
     }
 

@@ -179,10 +179,15 @@
       "prefix": "laas",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/laas-setting/tsconfig.lib.json",
             "project": "projects/laas-setting/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/laas-setting/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
