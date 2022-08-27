@@ -10,7 +10,7 @@
     "url": "https://github.com/luizamorimsouza/laas-setting.git"
   },
   "scripts": {
-    "build:lib": "ng build laas-setting",
+    "build:lib": "ng build laas-setting --prod",
     "start:lib": "ng build laas-setting --watch",
     "ng": "ng",
     "start": "ng serve",

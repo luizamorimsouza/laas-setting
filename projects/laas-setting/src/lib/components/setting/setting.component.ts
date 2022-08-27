@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AlertInput } from '@ionic/core';
 import { AlertController } from '@ionic/angular';
-import { Storage } from '@ionic/storage';
+import { Storage } from '@ionic/storage-angular';
 import { Setting } from './../../models/setting.model';
 
 @Component({

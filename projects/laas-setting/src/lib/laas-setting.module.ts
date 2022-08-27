@@ -3,13 +3,11 @@ import { SettingComponent } from './components/setting/setting.component';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { IonicStorageModule, Storage } from '@ionic/storage-angular';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SettingComponent],
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot()
   ],
