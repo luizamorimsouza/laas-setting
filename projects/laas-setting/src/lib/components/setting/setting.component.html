@@ -7,22 +7,22 @@
         <h2 class="setting-title">{{ setting?.title }}</h2>
       </ion-text>
 
-      <p *ngIf="(setting?.type == 'checkbox' || setting?.type == 'button') && setting?.description"
+      <p *ngIf="(setting?.type === 'checkbox' || setting?.type === 'button') && setting?.description"
         class="setting-value ion-text-wrap">
         {{ setting.description }}
       </p>
 
-      <p class="setting-value" *ngIf="setting?.type == 'text'">
+      <p class="setting-value" *ngIf="setting?.type === 'text'">
         {{ setting?.value }}
       </p>
 
-      <p class="setting-value" *ngIf="setting?.type == 'list'">
+      <p class="setting-value" *ngIf="setting?.type === 'list'">
         {{ setting?.label }}
       </p>
 
     </ion-label>
 
-    <ion-toggle [checked]="setting.value" slot="end" *ngIf="setting?.type == 'checkbox'"></ion-toggle>
+    <ion-toggle [checked]="setting.value" slot="end" *ngIf="setting?.type === 'checkbox'"></ion-toggle>
 
   </ion-item>
 </div>

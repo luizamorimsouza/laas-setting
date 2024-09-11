@@ -1,8 +1,8 @@
 {
   "name": "laas-setting",
-  "version": "0.0.4",
+  "version": "7.0.0",
   "author": "Luiz Augusto Amorim de Souza",
-  "email": "luiz@amorims.com.br",
+  "email": "luiz.souza@amorims.com.br",
   "description": "Library that create configuration items simply",
   "license": "MIT",
   "repository": {
@@ -11,13 +11,13 @@
   },
   "homepage": "https://github.com/luizamorimsouza/laas-setting",
   "peerDependencies": {
-    "@angular/common": "^11.2.0",
-    "@angular/core": "^11.2.0",
-    "@ionic/angular": "^5.6.3",
-    "@ionic/storage-angular": "^3.0.2"
+    "@angular/common": "^15.2.10",
+    "@angular/core": "^15.2.10",
+    "@ionic/angular": "^7.0.0",
+    "@ionic/storage-angular": "^4.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.7.0"
   },
   "keywords": [
     "ionic",
